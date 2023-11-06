@@ -17,14 +17,16 @@ namespace PhoneBook
             //looping through the names
             for (int i = 0; i < names.Length; i++)
             {
-                Console.WriteLine(names[i] + " " + phones[i] );
-                /*string result = string.Format("{ 0, -15} {1, -15}", names[i], phones[i]);
-                Console.WriteLine(result);*/
+                string name = names[i];
+                string phone = phones[i];
+                string result = string.Format("{ 0, -15} {1, -15}", name, phone);
+                Console.WriteLine(result);
+               
             } 
         }
 
         /// <summary>
-        /// bubble sort
+        /// bubble sort is used to sort the array in alafabetic order.
         /// </summary>
         private void sortbyName()
         {
@@ -44,7 +46,9 @@ namespace PhoneBook
             }
         }
         /// <summary>
-        /// 
+        /// swapping the result for this sorting method. 
+        /// to be able to swap the result while sorting through the lost we need to save the names/phones[position] in a temp variable to 
+        /// not lose it / overwrite it. by doing so we can swap two name/phone position in the array
         /// </summary>
         /// <param name="position"></param>
         private void swapResult( int position)
@@ -62,7 +66,8 @@ namespace PhoneBook
         }
 
         /// <summary>3,8
-        /// 
+        /// The following method is used to fill the 2D array with the two 1D arrays. 
+        /// By looping through the name array and then adding the result from both names array and phones array to the phoneList Array to possition 0 and 1. 
         /// </summary>
         private void fillTable()
         {
@@ -88,11 +93,14 @@ namespace PhoneBook
             //writing  an empty line.
             Console.WriteLine();
 
-            //sorting:
+            //sorting thi list :
             sortbyName();
             Console.WriteLine("Sorted List");
-
+            Console.WriteLine();
+            
+            //DISPLAY LIST
             displayList();
+            Console.WriteLine();
 
             //two dimensional array:
             int count = names.Length;//taking the value of who long the original array of names are:
