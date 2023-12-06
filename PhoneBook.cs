@@ -19,7 +19,7 @@ namespace PhoneBook
             {
                 string name = names[i];
                 string phone = phones[i];
-                string result = string.Format("{ 0, -15} {1, -15}", name, phone);
+                string result = string.Format("{0,-15}{1,-15}",name,phone);
                 Console.WriteLine(result);
                
             } 
